@@ -49,12 +49,12 @@ using Volo.Abp.VirtualFileSystem;
 using Volo.Abp.MultiTenancy;
 using Lsw.Abp.IdentityManagement.Blazor.Server.AntDesignUI;
 using Lsw.Abp.FeatureManagement.Blazor.AntDesignUI;
-using Lsw.Abp.PermissionManagement.Blazor.Server.AntDesignUI;
 using Lsw.Abp.FeatureManagement.Blazor.Server.AntDesignUI;
 using Lsw.Abp.SettingManagement.Blazor.Server.AntDesignUI;
 using Lsw.Abp.AspnetCore.Components.Server.AntDesignTheme.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theming;
 using Lsw.Abp.AspnetCore.Components.Web.AntDesignTheme;
+using Lsw.Abp.TenantManagement.Blazor.Server.AntDesignUI;
 
 namespace FYJ.IOT.TenantApp;
 
@@ -66,10 +66,6 @@ namespace FYJ.IOT.TenantApp;
     typeof(AbpEntityFrameworkCoreSqlServerModule),
     typeof(AbpSwashbuckleModule),
     typeof(AbpAspNetCoreSerilogModule),
-    typeof(AbpIdentityBlazorServerAntDesignModule),
-    typeof(AbpFeatureManagementBlazorWebServerAntDesignModule),
-    typeof(AbpPermissionManagementBlazorServerAntDesignModule),
-    typeof(AbpSettingManagementBlazorServerAntDesignModule),
 
     // Account module packages
     typeof(AbpAccountApplicationModule),
@@ -109,7 +105,12 @@ namespace FYJ.IOT.TenantApp;
     typeof(AbpSettingManagementApplicationModule),
     typeof(AbpSettingManagementEntityFrameworkCoreModule),
     typeof(AbpSettingManagementHttpApiModule),
-    typeof(AbpSettingManagementBlazorServerModule)
+    typeof(AbpSettingManagementBlazorServerModule),
+
+
+    typeof(AbpIdentityBlazorServerAntDesignModule),
+    typeof(AbpTenantManagementBlazorServerAntDesignModule),
+    typeof(AbpSettingManagementBlazorServerAntDesignModule)
 )]
 public class TenantAppModule : AbpModule
 {
